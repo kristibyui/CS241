@@ -11,13 +11,12 @@ def prompt_filename():
 ### Parse each word from the file
 def parse_file(filename):
    count = 0
-   file_in = open(filename, "r")
-   for line in file_in:    # Read each line in the file
-      words = line.split() # Default is spaces
-      for word in words:   # Read each word in the line
-         if word == "pride":
-            count += 1
-   file_in.close()
+   with open(filename, "r") as file_in:
+      for line in file_in:    # Read each line in the file
+         words = line.split() # Default is spaces
+         for word in words:   # Read each word in the line
+            if word == "pride":
+               count += 1
    return count
 
 ### Driver 
