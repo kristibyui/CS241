@@ -16,13 +16,12 @@ def prompt_target():
 ### Parse each word from the file looking for the target word
 def parse_file(filename, target):
    count = 0
-   file_in = open(filename, "r")
-   for line in file_in:     # Read each line in the file
-      words = line.split()  # Default are spaes
-      for word in words:    # Read each word in the line
-         if word.upper().find(target.upper()) != -1:  # Look for substrings in uppercase
-            count += 1
-   file_in.close()
+   with open(filename, "r") as file_in:
+      for line in file_in:     # Read each line in the file
+         words = line.split()  # Default are spaces
+         for word in words:    # Read each word in the line
+            if word.upper().find(target.upper()) != -1:  # Look for substrings in uppercase
+               count += 1
    return count
 
 ### Driver 
