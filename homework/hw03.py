@@ -1,6 +1,6 @@
 """
 CS241 Homework 03
-Written by Chad Maceth
+Written by Chad Macbeth
 """
 
 # Start with empty lists
