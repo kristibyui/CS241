@@ -20,7 +20,7 @@ class Circle(Point):
         self.radius = 0.0
 
     def prompt_for_circle(self):
-        super().prompt_for_point()
+        self.prompt_for_point()
         self.radius = float(input("Enter radius: "))
     
     def display(self):
