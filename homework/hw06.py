@@ -45,6 +45,10 @@ class HelpSystem:
             student = self.waiting_list.popleft()
             print("Now helping:")
             student.display()
+            if self.is_student_waiting():
+                print("Get ready:")
+                student = self.waiting_list[0]
+                student.display()
         else:
             print("No one to help.")
 
